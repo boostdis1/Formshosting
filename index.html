@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Customisation Request</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    opacity: 0.95;
+}
+
+.success {
+    display: none;
+    margin-top: 20px;
+    color: green;
+    font-weight: 600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <h1>Custom Product Request</h1>
+        <p class="subtitle">
+            Complete the form below and we'll contact you shortly.
+        </p>
+
+        <form
+            action="https://formspree.io/f/xpqvzdvb"
+            method="POST">
+
+            <label>Name *</label>
+            <input type="text" name="Name" required>
+
+            <label>Email *</label>
+            <input type="email" name="Email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" name="Phone">
+
+            <label>Product Model *</label>
+            <select name="Product Model" required>
+                <option value="">Select a model</option>
+                <option>Model A</option>
+                <option>Model B</option>
+                <option>Model C</option>
+            </select>
+
+            <label>Colour *</label>
+            <select name="Colour" required>
+                <option value="">Select colour</option>
+                <option>Black</option>
+                <option>White</option>
+                <option>Blue</option>
+                <option>Red</option>
+                <option>Green</option>
+            </select>
+
+            <label>Finish</label>
+            <select name="Finish">
+                <option>Matte</option>
+                <option>Satin</option>
+                <option>Gloss</option>
+            </select>
+
+            <div class="checkbox-group">
+                <label>Optional Extras</label>
+
+                <label>
+                    <input type="checkbox" name="Accessory Pack">
+                    Accessory Pack
+                </label>
+
+                <label>
+                    <input type="checkbox" name="Premium Packaging">
+                    Premium Packaging
+                </label>
+
+                <label>
+                    <input type="checkbox" name="Extended Warranty">
+                    Extended Warranty
+                </label>
+            </div>
+
+            <label>Additional Requirements</label>
+            <textarea name="Comments"></textarea>
+
+            <button type="submit">
+                Submit Request
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>
